@@ -24,14 +24,16 @@
 
 5-Create a dynamodb table named terraform-lock-table with Partition Key - "LockID"
 
-6-Create ECR registries for test,staging and production using terragrunt
+6- Change aws account id in environments/test/inputs.hcl
 
-7-use the Dockerfile given in the application_code repo(https://github.com/vinycoolguy2015/application_code) to build an image and push it to the ECR registries
+7-Create ECR registries for test,staging and production using terragrunt
 
-8-Create all the other application resources(VPC,Security Groups,IAM roles,WAF,ECS Cluster/Service, ALB and CodePipeline) using terragrunt.
+8-use the Dockerfile given in the application_code repo(https://github.com/vinycoolguy2015/application_code) to build an image and push it to the ECR registries
 
-9-Make some changes to the code on your local machine, build a new image and push it to the ECR registries.This will trigger the codepipline.
+9-Create all the other application resources(VPC,Security Groups,IAM roles,WAF,ECS Cluster/Service, ALB and CodePipeline) using terragrunt.
 
-10-Make some changes to the code and raise a PR for https://github.com/vinycoolguy2015/application_code. When the PR is merged to the test,staging or main branch, it will trigger respective github workflow to create a new image and push it to the respective ECR. Once the image is pushed to ECR,the respective codepipeline will be triggered for Blue/Green ECS deployment. 
+10-Make some changes to the code on your local machine, build a new image and push it to the ECR registries.This will trigger the codepipline.
+
+11-Make some changes to the code and raise a PR for https://github.com/vinycoolguy2015/application_code. When the PR is merged to the test,staging or main branch, it will trigger respective github workflow to create a new image and push it to the respective ECR. Once the image is pushed to ECR,the respective codepipeline will be triggered for Blue/Green ECS deployment. 
 
 Note: ECR repo name(ecr-test,ecr-staging and ecr-production is specified in the respective github workflows)

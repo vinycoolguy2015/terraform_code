@@ -32,4 +32,6 @@
 
 9-Make some changes to the code on your local machine, build a new image and push it to the ECR registries.This will trigger the codepipline.
 
-10-Make some changes to the code and raise a PR for https://github.com/vinycoolguy2015/application_code. When the PR is merged to the test,staging or main branch, it will trigger respective github workflow to create a new image and push it to the respective ECR. Once the image is pushed to ECR,the respective codepipeline will be triggered for Blue/Green ECS deployment.
+10-Make some changes to the code and raise a PR for https://github.com/vinycoolguy2015/application_code. When the PR is merged to the test,staging or main branch, it will trigger respective github workflow to create a new image and push it to the respective ECR. Once the image is pushed to ECR,the respective codepipeline will be triggered for Blue/Green ECS deployment. 
+
+Note: ECR repo name(ecr-test,ecr-staging and ecr-production is specified in the respective github workflows)
